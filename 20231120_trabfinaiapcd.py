@@ -89,13 +89,13 @@ df_piura = df_final['DISTRITO'].unique()
 #    ).add_to(piura_map)
 
 # Mostrar el mapa
-piura_map
+#piura_map
 
 # Crear el dashboard
-st.title("Dashboard del Departamento de Piura")
-st.markdown("Mapa en dos dimensiones con los distritos del departamento de Piura")
+#st.title("Dashboard del Departamento de Piura")
+#st.markdown("Mapa en dos dimensiones con los distritos del departamento de Piura")
 # Mostrar el mapa en el dashboard
-st.write(piura_map._repr_html_(), unsafe_allow_html=True)
+#st.write(piura_map._repr_html_(), unsafe_allow_html=True)
 
 import matplotlib.pyplot as plt
 # Filtra los datos de latitud y longitud para los distritos de Piura
