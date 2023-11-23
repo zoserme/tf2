@@ -72,32 +72,6 @@ print(df_final)
 # Filtrar los distritos del departamento de Piura sin repetir
 df_piura = df_final['DISTRITO'].unique()
 
-# Crear el mapa con los distritos del departamento de Piura
-piura_map = folium.Map(location=[-5.1949, -80.6323], zoom_start=10)  # Coordenadas del centro de Piura
-
-# Marcar los distritos en el mapa con círculos rojos
-for distrito in df_piura:
-    distrito_data = df_final[df_final['DISTRITO'] == distrito].iloc[0]  # Obtener los datos del primer registro del distrito
-    latitud = distrito_data['latitud']
-    longitud = distrito_data['longitud']
-    folium.CircleMarker(
-        location=[latitud, longitud],
-        radius=5,
-        color='red',
-        fill=True,
-        fill_color='red'
-    ).add_to(piura_map)
-
-# Mostrar el mapa
-#piura_map
-
-# Crear el dashboard
-st.title("Dashboard del Departamento de Piura")
-st.markdown("Mapa en dos dimensiones con los distritos del departamento de Piura")
-# Mostrar el mapa en el dashboard
-st.write(piura_map._repr_html_(), unsafe_allow_html=True)
-
-import matplotlib.pyplot as plt
 # Filtra los datos de latitud y longitud para los distritos de Piura
 piura_data = df_final[['latitud', 'longitud']]
 
