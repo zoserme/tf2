@@ -1,0 +1,11 @@
+folium
+streamlit
+pandas
+numpy
+matplotlib
+plotly
+pydeck
+shapely
+fiona
+geopandas
+pygeos
